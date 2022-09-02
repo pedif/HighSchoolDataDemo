@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingEnd="@dimen/margin_large"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_city"
+        android:paddingEnd="@dimen/margin_medium"
+        tools:text="NYC HIGHSCHOOL 1"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:textColor="?colorOnSurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_city"
+        tools:text="Manhattan"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_height="wrap_content"
+        tools:text="This is a long overview for this school so we know how it would look like "
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NYHighSchoolInfo</string>
+    <string name="sat_count_label">Number of SAT Test Takers :</string>
+    <string name="sat_thinking_label">Critical Reading Average :</string>
+    <string name="sat_math_label">Math Average :</string>
+    <string name="sat_writing_label">Writing Average :</string>
+    <string name="sat_list_label">List of Available SATs :</string>
+    <string name="school_label_1">academicopportunities 1</string>
+    <string name="school_label_2">academicopportunities 2</string>
+    <string name="school_label_3">academicopportunities 3</string>
+    <string name="school_label_4">academicopportunities 4</string>
+    <string name="school_label_5">academicopportunities 5</string>
+    <string name="school_academic_label">advancedplacement_courses</string>
+
+</resources>

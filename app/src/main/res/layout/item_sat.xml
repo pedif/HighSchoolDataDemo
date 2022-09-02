@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingEnd="@dimen/margin_large"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_participant_count_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/sat_count_label"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_thinking_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/sat_thinking_label"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/tv_participant_count_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_math_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/sat_math_label"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/tv_thinking_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_writing_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/sat_writing_label"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/tv_math_label"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="@dimen/margin_small"
+        android:layout_height="match_parent"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tv_participant_count_label,tv_thinking_label,tv_math_label,tv_writing_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_participant_count"
+        tools:text="134"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tv_participant_count_label"
+        app:layout_constraintStart_toEndOf="@+id/barrier"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_thinking"
+        tools:text="12.58"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tv_thinking_label"
+        app:layout_constraintStart_toEndOf="@+id/barrier"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_math"
+        tools:text="18.6"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tv_math_label"
+        app:layout_constraintStart_toEndOf="@+id/barrier"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_writing"
+        tools:text="15.6"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tv_writing_label"
+        app:layout_constraintStart_toEndOf="@+id/barrier"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

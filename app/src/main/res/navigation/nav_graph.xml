@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pedif.nyhighschoolinfo.ui.home.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_highSchoolFragment"
+            app:destination="@id/highSchoolFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/highSchoolFragment"
+        android:name="com.pedif.nyhighschoolinfo.ui.highschool.HighSchoolFragment"
+        android:label="fragment_high_school"
+        tools:layout="@layout/fragment_high_school" >
+        <argument
+            android:name="dbn"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+</navigation>
